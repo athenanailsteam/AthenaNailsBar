@@ -1,19 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', (req, res)=>{
-    res.render('home', {layout: 'main'});
-});
-router.get('/contact', (req, res)=>{
-    res.render('contact_us', {layout: 'main'});
-});
+router.use("/", require('./home'));
+router.use("/contact", require('./contact'));
+router.use("/aboutus", require('./aboutus'));
+router.use("/services", require('./service'));
 
-router.get('/aboutus', (req, res)=>{
-    res.render('about_us', {layout: 'main'});
-});
+router.use("/admin", require('./admin/index'));
 
-router.get('/services', (req, res)=>{
-    res.render('service', {layout: 'main'});
-});
 
 module.exports = router;

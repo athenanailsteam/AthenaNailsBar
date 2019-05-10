@@ -1,7 +1,6 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var index = require('./routes/index');
-var admin = require('./routes/admin/index');
 
 var port = process.env.PORT|| 3000;
 
@@ -24,9 +23,6 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/publics'));
 
 app.use('/',index);
-app.use('/admin',admin);
-
-
 
 app.listen(port, function () {
     console.log('express-handlebars example server listening on: %d', port);
