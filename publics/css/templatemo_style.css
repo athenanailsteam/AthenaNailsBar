@@ -76,6 +76,7 @@ h2 { font-size: 24px; }
 .tm-left-inner-container { }
 .tm-right-inner-container {
 	max-width: 750px;
+	padding-left: 0px;
 }
 .templatemo-logo { 
 	display: table;
@@ -254,4 +255,14 @@ iframe { border: none; }
 	}
 	.left-container, .right-container {	padding-top: 40px; }
 	.templatemo-logo .col-lg-6, .templatemo-logo .col-md-6, .templatemo-logo .col-sm-6 { padding-top: 0; }
+}
+
+.img-service{
+  width: 100%;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+	background-size: cover;
+	 padding-top: 10px;
+	 padding-left: 40px;
 }

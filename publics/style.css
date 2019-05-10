@@ -1712,6 +1712,7 @@ input:focus {
 .bg-title-page {
   width: 100%;
   min-height: 400px;
+  max-width: 1920px;
   padding-left: 15px;
   padding-right: 15px;
   background-repeat: no-repeat;
