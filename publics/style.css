@@ -1717,6 +1717,7 @@ input:focus {
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
+  border:1px solid #C8B55E;
 }
 
 @media (max-width: 450px) {
