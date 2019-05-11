@@ -2,11 +2,11 @@ var mysql = require('mysql');
 var utils = require('../helpers/helper')
 var createConnection = () => {
     return mysql.createConnection({
-        host: 'localhost',
+        host: 'sql10.freemysqlhosting.net',
         port: '3306',
-        user: 'root',
-        password: 'root',
-        database: 'athena_nails'
+        user: 'sql10291290',
+        password: 'JUXhTVXnne',
+        database: 'sql10291290'
 
     });
 };
