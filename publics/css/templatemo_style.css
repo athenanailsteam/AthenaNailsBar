@@ -17,13 +17,13 @@ h2 { font-size: 24px; }
   width: 100%;
   margin-right: auto;
 	margin-left: auto;
-	border-left: 1px solid #bca858;
-	border-right: 1px solid #bca858;
-	border-bottom: 1px solid #bca858;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
 }
 
 @media (min-width: 576px) {
-  .templatemocontainer {
+  .templatemo-container {
     max-width: 540px;
   }
 }
@@ -64,7 +64,7 @@ h2 { font-size: 24px; }
 }
 .black-bg {
 	color: white;
-	background-color: #004080;
+	background-color: ffffff;
 }
 .white-bg {	background-color: white; }
 .tm-left-inner-container { 
@@ -256,11 +256,13 @@ iframe { border: none; }
 	.templatemo-logo .col-lg-6, .templatemo-logo .col-md-6, .templatemo-logo .col-sm-6 { padding-top: 0; }
 }
 .img-service{
-  width: 100%;
-  min-height: 350px;
+  width: 130%;
+	height: 640px;
+  margin-right: auto;
+	margin-left: auto;
   background-repeat: no-repeat;
   background-position: center 0;
 	background-size: cover;
 	 padding-top: 10px;
-	 padding-left: 50px;
+	 padding-left: 30px;
 }
