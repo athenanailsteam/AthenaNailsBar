@@ -8,5 +8,8 @@ router.use("/services", require('./service'));
 
 router.use("/admin", require('./admin/index'));
 
+router.use("/login", require('./admin/login'));
+
+
 
 module.exports = router;
