@@ -17,9 +17,6 @@ h2 { font-size: 24px; }
   width: 100%;
   margin-right: auto;
 	margin-left: auto;
-	border-left: 1px solid lightgray;
-	border-right: 1px solid lightgray;
-	border-bottom: 1px solid lightgray;
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
@@ -75,7 +72,7 @@ h2 { font-size: 24px; }
 	padding-left: 25px;
 }
 .tm-right-inner-container {
-	max-width: 770px;
+	max-width: 800px;
 	padding-left: 0px;
 }
 .templatemo-logo { 
@@ -239,7 +236,9 @@ iframe { border: none; }
 		margin-bottom: 30px;
 		padding: 20px;
 	}
-	.tm-left-inner-container { margin-right: 0; }
+	.tm-left-inner-container {
+		margin-right: 0; 
+	}
 	.tm-right-inner-container {	margin-left: 0;	}
 	.templatemo-nav { max-width: 100%; }
 	.templatemo-nav>li>a {

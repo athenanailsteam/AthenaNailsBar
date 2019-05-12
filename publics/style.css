@@ -68,8 +68,7 @@ h6 {
 
 a,
 a:active,
-a:focus,
-a:hover {
+a:focus{
   color: #252525;
   text-decoration: none;
   -webkit-transition-duration: 500ms;
@@ -77,13 +76,22 @@ a:hover {
   transition-duration: 500ms;
   outline: none;
   font-weight: 400; }
-
+a:hover{
+  color:#bca858;
+  text-decoration: none;
+  outline: none;
+}
+hr{
+  color:lightgray;
+  background-color: lightgray;
+  height: 1px;
+}
 li {
   list-style: none; }
 
 p {
   line-height: 1.7;
-  color: #6e6e6e;
+  color:black;
   font-size: 16px;
   font-weight: 400; }
 
