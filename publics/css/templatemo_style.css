@@ -20,6 +20,8 @@ h2 { font-size: 24px; }
 	border-left: 1px solid lightgray;
 	border-right: 1px solid lightgray;
 	border-bottom: 1px solid lightgray;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 @media (min-width: 576px) {
@@ -42,7 +44,7 @@ h2 { font-size: 24px; }
 
 @media (min-width: 1200px) {
   .templatemo-container {
-    max-width: 1140px;
+    max-width: 1150px;
   }
 }
 .left-container {
