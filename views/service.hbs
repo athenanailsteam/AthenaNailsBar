@@ -1,116 +1,38 @@
 <section class="bg-title-page p-t-4p-b-0 flex-col-c-m" style="background-image: url(img/img_service/bg_title.jpg);">
 </section>
 <section>
-  <div class="templatemo-container">
-    <div class="col-lg-s black-bg left-container">
-      <div class="tm-left-inner-container">
-					<div class="leftbar p-r-20 p-r-0-sm">
-						<ul class="p-b-0">
-            				<h1 class="l-text1 t-center p-t-20">services</h1>
-							<li class="p-t-0 p-l-10 hov3">
-								<a href="/services" class=" active1">
-									<strong>Nail Polish</strong>
-								</a><i class="fa fa-home fa-medium"></i>
-							</li>
+	<div class="templatemo-container">
+		<div class="col-lg-s black-bg left-container">
+			<div class="tm-left-inner-container">
+				<div class="leftbar p-r-20 p-r-0-sm">
+					<ul class="p-b-0">
+						<h1 class="l-text1 t-center p-t-20">services</h1>
+						{{#each listServices}}
+						<li class="p-t-0 p-l-10 hov3">
+							<a href="/service?id={{id}}">
+								<strong>{{services_name}}</strong>
+							</a><i class="fa fa-home fa-medium"></i>
+						</li>
+						{{/each}}
 
-							<li class="p-t-4 p-l-10 hov3">
-								<a href="/aboutus">
-									<strong>Head Shampoo</strong>
-								</a><i class="fa fa-home fa-medium"></i>
-							</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-7 white-bg right-container">
+			<div class="tm-right-inner-container templatemo-item templatemo-testimonial">
+				{{#each serviceDescription}}
+				<div class="templatemo-border-left">
+					<p class="text-left"><strong>{{name}}</strong></p>
+					<p><i class="fa fa-quote-left fa-medium"></i>
+						{{description}}
+					</p>
+					<p class="text-right"><strong>{{price}}(VND)</strong></p>
+				</div>
+				{{/each}}
 
-							<li class="p-t-4 p-l-10 hov3">
-								<a href="./service_h.html">
-									<strong>Head Shampoo</strong>
-								</a><i class="fa fa-home fa-medium"></i>
-							</li>
-
-							<li class="p-t-4 p-l-10 hov3">
-								<a href="#">
-									<strong>Head Shampoo</strong>
-								</a><i class="fa fa-home fa-medium"></i>
-							</li>
-
-							<li class="p-t-4 p-l-10 hov3">
-								<a href="#">
-									<strong>Head Shampoo</strong>
-								</a><i class="fa fa-home fa-medium"></i>
-							</li>
-
-							<li class="p-t-4 p-l-10 hov3">
-									<a href="#">
-										<strong>Head Shampoo</strong>
-									</a><i class="fa fa-home fa-medium"></i>
-							</li>
-
-							<li class="p-t-4 p-l-10 hov3">
-									<a href="#">
-										<strong>Head Shampoo</strong>
-									</a><i class="fa fa-home fa-medium"></i>
-							</li>
-
-							<li class="p-t-4 p-l-10 hov3">
-									<a href="#">
-									<strong>Sns Pearl Powder Change</strong>
-									</a><i class="fa fa-home fa-medium"></i>
-								</li>
-						</ul>
-					</div>
-      </div>
-     </div>
-    <div class="col-lg-7 white-bg right-container">
-      <div class="tm-right-inner-container templatemo-item templatemo-testimonial">
-								<div class="templatemo-border-left">
-										<p class="text-left"><strong>Polish Change</strong></p>
-										<p><i class="fa fa-quote-left fa-medium"></i>
-										Cut, shape and  Regular Polish
-										</p>
-										<p class="text-right"><strong>$ 50</strong></p>
-								</div>
-								<div class="templatemo-border-left">
-										<p class="text-left"><strong>Nail Care</strong></p>
-										<p><i class="fa fa-quote-left fa-medium"></i>
-										Cut, Shape, Cuticle Care + OPI, Cuccio, Essie and DND reg polish
-										</p>
-										<p class="text-right"><strong>(8usd) 210,000 VND</strong></p>
-								</div>
-								<div class="templatemo-border-left">
-										<p class="text-left"><strong>Nail Care</strong></p>
-										<p><i class="fa fa-quote-left fa-medium"></i>
-										Cut, Shape, Cuticle Care + OPI, Cuccio, Essie and DND reg polish
-										</p>
-										<p class="text-right"><strong>(8usd) 210,000 VND</strong></p>
-								</div>
-								<div class="templatemo-border-left">
-										<p class="text-left"><strong>Nail Care</strong></p>
-										<p><i class="fa fa-quote-left fa-medium"></i>
-										Cut, Shape, Cuticle Care + OPI, Cuccio, Essie and DND reg polish
-										</p>
-										<p class="text-right"><strong>mani: (20usd) 430,000VND  pedi: (27usd )580,000vnd</strong></p>
-								</div>
-								<div class="templatemo-border-left">
-										<p class="text-left"><strong>Nail Care</strong></p>
-										<p><i class="fa fa-quote-left fa-medium"></i>
-										Cut, Shape, Cuticle Care + OPI, Cuccio, Essie and DND reg polish
-										</p>
-										<p class="text-right"><strong>(8usd) 210,000 VND</strong></p>
-								</div>
-								<div class="templatemo-border-left">
-										<p class="text-left"><strong>Nail Care</strong></p>
-										<p><i class="fa fa-quote-left fa-medium"></i>
-										Cut, Shape, Cuticle Care + OPI, Cuccio, Essie and DND reg polish
-										</p>
-										<p class="text-right"><strong>(8usd) 210,000 VND</strong></p>
-								</div>
-								<div class="templatemo-border-left">
-										<p class="text-left"><strong>Nail Care</strong></p>
-										<p><i class="fa fa-quote-left fa-medium"></i>
-										Cut, Shape, Cuticle Care + OPI, Cuccio, Essie and DND reg polish
-										</p>
-										<p class="text-right"><strong>(8usd) 210,000 VND</strong></p>
-								</div>
-      </div>
-    </div>
-  </div>
-  <hr>
-</section> 
+			</div>
+		</div>
+	</div>
+	<hr>
+</section>

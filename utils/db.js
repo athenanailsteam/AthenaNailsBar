@@ -10,7 +10,7 @@ var createConnection = () => {
 
     });
 };
-var getConnection = () => {
+function getConnection(){
     var connection = createConnection();
     if (connection != null) {
         console.log('Success connect to db');
@@ -95,5 +95,5 @@ module.exports = {
             });
         });
     },
-    getConnection: getConnection()
+    getConnection: getConnection
 };
