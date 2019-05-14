@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+router.use(require('../middlewares/local.mdw'));
 
 router.use("/", require('./home'));
 router.use("/contact", require('./contact'));

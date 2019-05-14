@@ -7,9 +7,9 @@
 				<div class="leftbar p-r-20 p-r-0-sm">
 					<ul class="p-b-0">
 						<h1 class="l-text1 t-center p-t-20">services</h1>
-						{{#each listServices}}
+						{{#each lcListServices}}
 						<li class="p-t-0 p-l-10 hov3">
-							<a href="/service?id={{id}}">
+							<a class=" {{#if isActive}}active1{{/if}}" href="/services?id={{id}}">
 								<strong>{{services_name}}</strong>
 							</a><i class="fa fa-home fa-medium"></i>
 						</li>
@@ -24,15 +24,14 @@
 				{{#each serviceDescription}}
 				<div class="templatemo-border-left">
 					<p class="text-left"><strong>{{name}}</strong></p>
+					{{#if description}}
 					<p><i class="fa fa-quote-left fa-medium"></i>
 						{{description}}
 					</p>
+					{{else}}
+					<p></p>
+					{{/if}}
 					<p class="text-right"><strong>{{price}}(VND)</strong></p>
-
-
-
-
-					
 				</div>
 				{{/each}}
 

@@ -1,188 +1,145 @@
-<!-- Sidebar Toggle (Topbar) -->
-<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-    <i class="fa fa-bars"></i>
-</button>
-
-<!-- Topbar Search -->
-<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-    <div class="input-group">
-        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search"
-            aria-describedby="basic-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-primary" type="button">
-                <i class="fas fa-search fa-sm"></i>
-            </button>
-        </div>
+<div class="header navbar">
+    <div class="header-container">
+        <ul class="nav-left">
+            <li><a id="sidebar-toggle" class="sidebar-toggle" href="javascript:void(0);"><i class="ti-menu"></i></a>
+            </li>
+            <li class="search-box"><a class="search-toggle no-pdd-right" href="javascript:void(0);"><i
+                        class="search-icon ti-search pdd-right-10"></i> <i
+                        class="search-icon-close ti-close pdd-right-10"></i></a></li>
+            <li class="search-input"><input class="form-control" type="text" placeholder="Search..."></li>
+        </ul>
+        <ul class="nav-right">
+            <li class="notifications dropdown"><span class="counter bgc-red">3</span> <a href=""
+                    class="dropdown-toggle no-after" data-toggle="dropdown"><i class="ti-bell"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="pX-20 pY-15 bdB"><i class="ti-bell pR-10"></i> <span
+                            class="fsz-sm fw-600 c-grey-900">Notifications</span></li>
+                    <li>
+                        <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                            <li><a href="" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
+                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
+                                            src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                                    </div>
+                                    <div class="peer peer-greed"><span><span class="fw-500">John Doe</span>
+                                            <span class="c-grey-600">liked your <span
+                                                    class="text-dark">post</span></span></span>
+                                        <p class="m-0"><small class="fsz-xs">5 mins ago</small></p>
+                                    </div>
+                                </a></li>
+                            <li><a href="" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
+                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
+                                            src="https://randomuser.me/api/portraits/men/2.jpg" alt="">
+                                    </div>
+                                    <div class="peer peer-greed"><span><span class="fw-500">Moo Doe</span>
+                                            <span class="c-grey-600">liked your <span class="text-dark">cover
+                                                    image</span></span></span>
+                                        <p class="m-0"><small class="fsz-xs">7 mins ago</small></p>
+                                    </div>
+                                </a></li>
+                            <li><a href="" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
+                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
+                                            src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                                    </div>
+                                    <div class="peer peer-greed"><span><span class="fw-500">Lee Doe</span>
+                                            <span class="c-grey-600">commented on your <span
+                                                    class="text-dark">video</span></span></span>
+                                        <p class="m-0"><small class="fsz-xs">10 mins ago</small></p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="pX-20 pY-15 ta-c bdT"><span><a href="" class="c-grey-600 cH-blue fsz-sm td-n">View All
+                                Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a></span></li>
+                </ul>
+            </li>
+            <li class="notifications dropdown"><span class="counter bgc-blue">3</span> <a href=""
+                    class="dropdown-toggle no-after" data-toggle="dropdown"><i class="ti-email"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="pX-20 pY-15 bdB"><i class="ti-email pR-10"></i> <span
+                            class="fsz-sm fw-600 c-grey-900">Emails</span></li>
+                    <li>
+                        <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                            <li><a href="" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
+                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
+                                            src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                                    </div>
+                                    <div class="peer peer-greed">
+                                        <div>
+                                            <div class="peers jc-sb fxw-nw mB-5">
+                                                <div class="peer">
+                                                    <p class="fw-500 mB-0">John Doe</p>
+                                                </div>
+                                                <div class="peer"><small class="fsz-xs">5 mins ago</small>
+                                                </div>
+                                            </div><span class="c-grey-600 fsz-sm">Want to create your own
+                                                customized data generator for
+                                                your app...</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li><a href="" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
+                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
+                                            src="https://randomuser.me/api/portraits/men/2.jpg" alt="">
+                                    </div>
+                                    <div class="peer peer-greed">
+                                        <div>
+                                            <div class="peers jc-sb fxw-nw mB-5">
+                                                <div class="peer">
+                                                    <p class="fw-500 mB-0">Moo Doe</p>
+                                                </div>
+                                                <div class="peer"><small class="fsz-xs">15 mins ago</small>
+                                                </div>
+                                            </div><span class="c-grey-600 fsz-sm">Want to create your own
+                                                customized data generator for
+                                                your app...</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li><a href="" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
+                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
+                                            src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                                    </div>
+                                    <div class="peer peer-greed">
+                                        <div>
+                                            <div class="peers jc-sb fxw-nw mB-5">
+                                                <div class="peer">
+                                                    <p class="fw-500 mB-0">Lee Doe</p>
+                                                </div>
+                                                <div class="peer"><small class="fsz-xs">25 mins ago</small>
+                                                </div>
+                                            </div><span class="c-grey-600 fsz-sm">Want to create your own
+                                                customized data generator for
+                                                your app...</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="pX-20 pY-15 ta-c bdT"><span><a href="email.html"
+                                class="c-grey-600 cH-blue fsz-sm td-n">View
+                                All Email <i class="fs-xs ti-angle-right mL-10"></i></a></span></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1"
+                    data-toggle="dropdown">
+                    <div class="peer mR-10"><img class="w-2r bdrs-50p"
+                            src="https://randomuser.me/api/portraits/men/10.jpg" alt=""></div>
+                    <div class="peer"><span class="fsz-sm c-grey-900">John Doe</span></div>
+                </a>
+                <ul class="dropdown-menu fsz-sm">
+                    <li><a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i class="ti-settings mR-10"></i>
+                            <span>Setting</span></a></li>
+                    <li><a href="/admin/edit-profile" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i
+                                class="ti-user mR-10"></i>
+                            <span>Profile</span></a></li>
+                    <li><a href="email.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i
+                                class="ti-email mR-10"></i>
+                            <span>Messages</span></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i class="ti-power-off mR-10"></i>
+                            <span>Logout</span></a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
-</form>
-
-<!-- Topbar Navbar -->
-<ul class="navbar-nav ml-auto">
-
-    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-    <li class="nav-item dropdown no-arrow d-sm-none">
-        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-search fa-fw"></i>
-        </a>
-        <!-- Dropdown - Messages -->
-        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-            <form class="form-inline mr-auto w-100 navbar-search">
-                <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                        aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                            <i class="fas fa-search fa-sm"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </li>
-
-    <!-- Nav Item - Alerts -->
-    <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-bell fa-fw"></i>
-            <!-- Counter - Alerts -->
-            <span class="badge badge-danger badge-counter">3+</span>
-        </a>
-        <!-- Dropdown - Alerts -->
-        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-            aria-labelledby="alertsDropdown">
-            <h6 class="dropdown-header">
-                Alerts Center
-            </h6>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="mr-3">
-                    <div class="icon-circle bg-primary">
-                        <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                </div>
-                <div>
-                    <div class="small text-gray-500">December 12, 2019</div>
-                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                </div>
-            </a>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="mr-3">
-                    <div class="icon-circle bg-success">
-                        <i class="fas fa-donate text-white"></i>
-                    </div>
-                </div>
-                <div>
-                    <div class="small text-gray-500">December 7, 2019</div>
-                    $290.29 has been deposited into your account!
-                </div>
-            </a>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="mr-3">
-                    <div class="icon-circle bg-warning">
-                        <i class="fas fa-exclamation-triangle text-white"></i>
-                    </div>
-                </div>
-                <div>
-                    <div class="small text-gray-500">December 2, 2019</div>
-                    Spending Alert: We've noticed unusually high spending for your account.
-                </div>
-            </a>
-            <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-        </div>
-    </li>
-
-    <!-- Nav Item - Messages -->
-    <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-envelope fa-fw"></i>
-            <!-- Counter - Messages -->
-            <span class="badge badge-danger badge-counter">7</span>
-        </a>
-        <!-- Dropdown - Messages -->
-        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-            aria-labelledby="messagesDropdown">
-            <h6 class="dropdown-header">
-                Message Center
-            </h6>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                </div>
-                <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been
-                        having.</div>
-                    <div class="small text-gray-500">Emily Fowler · 58m</div>
-                </div>
-            </a>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
-                    <div class="status-indicator"></div>
-                </div>
-                <div>
-                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them
-                        sent to you?</div>
-                    <div class="small text-gray-500">Jae Chun · 1d</div>
-                </div>
-            </a>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
-                    <div class="status-indicator bg-warning"></div>
-                </div>
-                <div>
-                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so
-                        far, keep up the good work!</div>
-                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                </div>
-            </a>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                </div>
-                <div>
-                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people
-                        say this to all dogs, even if they aren't good...</div>
-                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                </div>
-            </a>
-            <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-        </div>
-    </li>
-
-    <div class="topbar-divider d-none d-sm-block"></div>
-
-    <!-- Nav Item - User Information -->
-    <li class="nav-item dropdown no-arrow">
-        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-            <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
-        </a>
-        <!-- Dropdown - User Information -->
-        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#">
-                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                Profile
-            </a>
-            <a class="dropdown-item" href="#">
-                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                Settings
-            </a>
-            <a class="dropdown-item" href="#">
-                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                Activity Log
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                Logout
-            </a>
-        </div>
-    </li>
-
-</ul>
+</div>

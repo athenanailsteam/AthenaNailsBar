@@ -33,6 +33,19 @@ module.exports = {
             });
         })
     },
+    // update table by id
+    uppdate: (tableName, entity, id) => {
+        return new Promise((resolve, reject) => {
+            var sql = `UPDATE ${tableName} set ? WHERE id = ?`;
+            var conn = createConnection();
+            conn.connect();
+            conn.query(sql, [entity, id], (err, value) => {
+                if (err) reject(err);
+                else resolve(value.id);
+                conn.end();
+            })
+        })
+    },
     //Find all table in db
     findAll: (tableName) => {
         return new Promise((resolve, reject) => {
