@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var listServiceSModel = require('../model/list_services');
 var listDetailsServicesModel = require('../model/service_detail');
 var id;
 router.get('/', (req, res) => {

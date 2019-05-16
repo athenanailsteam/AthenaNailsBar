@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
+router.use(require('../../middlewares/local.mdw'));
 
+// router admin
 router.use("/booking", require('./booking.admin'));
+router.use("/manage-services", require('./list_service.admin'));
+router.use("/services-details", require('./service_details.admin'));
 
 module.exports = router;

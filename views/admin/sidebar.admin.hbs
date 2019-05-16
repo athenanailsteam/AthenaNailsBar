@@ -1,7 +1,7 @@
 <div class="sidebar-inner">
     <div class="sidebar-logo">
         <div class="peers ai-c fxw-nw">
-            <div class="peer peer-greed"><a class="sidebar-link td-n" href="/admin/booking"></a>
+            <div class="peer peer-greed"><a class="sidebar-link td-n" href="/admin/booking">
                     <div class="peers ai-c fxw-nw">
                         <div class="peer">
                             <div class="logo"><img src="" alt=""></div>
@@ -22,16 +22,15 @@
         <li class="nav-item mT-30 active"><a class="sidebar-link" href="/admin/booking"><span class="icon-holder"><i
                         class="c-blue-500 ti-calendar"></i> </span><span class="title">Manage Schedule Book</span></a>
         </li>
-        <li class="nav-item"><a class="sidebar-link" href="/admin/services"><span class="icon-holder"><i
+        <li class="nav-item"><a class="sidebar-link" href="/admin/manage-services"><span class="icon-holder"><i
                         class="c-yellow-500 ti-package"></i> </span><span class="title">Manage Service</span></a></li>
         <li class="nav-item dropdown"><a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i
                         class="c-orange-500 ti-layout-list-thumb"></i> </span><span class="title">Services Detail</span>
                 <span class="arrow"><i class="ti-angle-right"></i></span></a>
             <ul class="dropdown-menu">
-                <li><a class="sidebar-link" href="#">Ori Nail Care</a></li>
-                <li><a class="sidebar-link" href="#">Gel Nail</a></li>
-                <li><a class="sidebar-link" href="#">SNS Dipping Powder</a></li>
-                <li><a class="sidebar-link" href="#">Addition Service</a></li>
+                {{#each lcListServices}}
+                    <li><a class="sidebar-link" href="/admin/services-details?id={{id}}">{{services_name}}</a></li> 
+                {{/each}}
             </ul>
         </li>
         <li class="nav-item"><a class="sidebar-link" href="email.html"><span class="icon-holder"><i
