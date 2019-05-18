@@ -20,6 +20,32 @@ function getConnection(){
     return null;
 }
 module.exports = {
+    excute: (query) => {
+        return new Promise((resolve, reject) => {
+            var conn = createConnection();
+            conn.connect();
+            conn.query(query, (err, value) => {
+                if (err) reject(err);
+                else resolve(value);
+                conn.end();
+            })
+        })
+    }
+    ,
+    update: (tableName, entity) => {
+        return new Promise((resolve, reject) => {
+            var sql = `UPDATE ${tableName} set ? WHERE id = ?`;
+            var conn = createConnection();
+            conn.connect();
+            entity["updated_at"] = utils.GetTimeNow();
+            conn.query(sql, [entity, entity.id], (err, value) => {
+                if (err) reject(err);
+                else resolve(value.id);
+                conn.end();
+            })
+        })
+    },
+
     //delete by id
     deleteById: (tableName, id) => {
         return new Promise((resolve, reject) => {
@@ -31,19 +57,6 @@ module.exports = {
                 else resolve(value);
                 conn.end();
             });
-        })
-    },
-    // update table by id
-    uppdate: (tableName, entity, id) => {
-        return new Promise((resolve, reject) => {
-            var sql = `UPDATE ${tableName} set ? WHERE id = ?`;
-            var conn = createConnection();
-            conn.connect();
-            conn.query(sql, [entity, id], (err, value) => {
-                if (err) reject(err);
-                else resolve(value.id);
-                conn.end();
-            })
         })
     },
     //Find all table in db
@@ -74,6 +87,15 @@ module.exports = {
         });
     },
     findOne: (tableName, field, username) => {
+        //     var sql = `SELECT * from ${tableName} WHERE ${field} = ?`;
+        //     var conn = getConnection();
+        //     conn.query(sql, username, function(err, value) {
+        //         if (err) reject(err);
+        //         else {
+        //             resolve(value);
+        //         }
+        //         connec
+        //     });
         console.log(username);
         return new Promise((resolve, reject) => {
             var sql = `SELECT * from ${tableName} WHERE ${field} = ?`;
@@ -98,13 +120,12 @@ module.exports = {
             entity["created_at"] = utils.GetTimeNow();
             entity["updated_at"] = utils.GetTimeNow();
             conn.query(sql, entity, (error, value) => {
-                conn.query(sql, enity, (error, value) => {
-                    if (error) reject(error);
-                    else {
-                        resolve(value.InsertId);
-                    }
-                    conn.end();
-                });
+                if (error) reject(error);
+                else {
+                    resolve(value);
+                }
+                conn.end();
+
             });
         });
     },
