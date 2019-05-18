@@ -12,6 +12,4 @@ router.use("/admin", require('./admin/index'));
 
 router.use("/login", require('./admin/login'));
 
-
-
 module.exports = router;
