@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 var multer = require('multer');
 const path = require('path');
-var listAdminServiceModel = require('../../model/list_service.admin');
+var listAdminServiceModel = require('../../model/list_services');
 router.get('/', (req, res) => {
-    var s = listAdminServiceModel.getListAdminService();
+    var s = listAdminServiceModel.findAll();
     s.then(rows => {
         console.log(rows);
         res.render('service_admin', {
@@ -24,7 +24,7 @@ var storage = multer.diskStorage({
 });
 var upload = multer({ storage: storage }).single('file');
 router.post('/', (req, res) => {
-    var s = listAdminServiceModel.getListAdminService();
+    var s = listAdminServiceModel.findAll();
     s.then(rows => {
         upload(req, res, (err) => {
             var filename = path.basename(req.file.path);
