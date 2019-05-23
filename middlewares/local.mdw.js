@@ -1,8 +1,17 @@
-var listServicesModel = require('../model/list_services');
+var servicesDB = require('../model/list_services');
+var employeesDB = require('../model/employees');
 
 module.exports = (req, res, next) => {
-    listServicesModel.findAll().then(rows =>{
+    servicesDB.findAll().then(rows =>{
         res.locals.lcListServices = rows;
-        next();
+    }).catch(err => {
+        console.log(err);
     })
+
+    employeesDB.findAll().then(rows =>{
+        res.locals.lcListEmployees = rows;
+        next();
+    }).catch(err => {
+        console.log(err);
+    });    
 }

@@ -19,13 +19,14 @@
     <link href="./css/owl.carousel.css" rel="stylesheet">
     <link href="./css/owl.theme.default.css" rel="stylesheet">
     <link href="./css/animate.css" rel="stylesheet">
-	<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="./css/templatemo_style.css" rel="stylesheet" type="text/css">
+    <link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/templatemo_style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="./css/util.css">
     <link href="main_styles.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
     <script>
         // Initialize and add the map
@@ -39,9 +40,10 @@
             var marker = new google.maps.Marker({ position: uluru, map: map });
         }
     </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzGTfU97JHRG9n2U29EAojIhFll2RE09I&callback=initMap">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzGTfU97JHRG9n2U29EAojIhFll2RE09I&callback=initMap">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
 </head>
 
 <body>
@@ -57,9 +59,8 @@
         {{>footer}}
     </footer>
     <!-- Footer Area End -->
-
+    {{>date-time}}
     {{>booking}}
-
     <!-- All JS Files -->
     <!-- jQuery -->
     <script src="./js/jquery.min.js"></script>

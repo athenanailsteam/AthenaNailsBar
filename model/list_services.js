@@ -5,3 +5,4 @@ module.exports = {
        return db.findAll('list_services');
    }
 }
+

@@ -39,8 +39,11 @@ app.engine('hbs', exphbs({
     ]
 })
 );
-
 app.set('view engine', 'hbs');
+//set moment helper for handlebars
+var Handlebars = require("handlebars");
+var MomentHandler = require("handlebars.moment");
+MomentHandler.registerHelpers(Handlebars);
 
 //static folder
 app.use(express.static(__dirname + '/publics'));
