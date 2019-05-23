@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
     } else {
         id = 1;
     }
-    console.log(id);
     var d = listDetailsAdminServicesModel.loadServiceDescription('service_detail', id);
     d.then(a => {
         console.log(a);
