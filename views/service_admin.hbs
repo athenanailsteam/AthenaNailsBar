@@ -35,29 +35,12 @@
                                     <td>{{id}}</td>
                                     <td width="15%">{{services_name}}</td>
                                     <td>
-                                        <form action="#" method="POST" enctype="multipart/form-data">
-                                            <p>Choose File</p>
-                                            <span class="hiddenFileInput">
-                                                <input type="file" name="file" />
-                                            </span>
-                                            <input type="submit" value="Submit">
-                                            {{#if success}}
-                                            <div class="alert alert-success" role="alert">
-                                                {{success}}
-                                            </div>
-                                            {{/if}}
-                                            {{#if error}}
-                                            <div class="alert alert-success" role="alert">
-                                                {{error}}
-                                            </div>
-                                            {{/if}}
-                                        </form>
                                         <br><br>
-                                        <img src="../img/upload/bg_title.jpg" style="width:450px">
+                                        <img src="{{image_service}}" style="width:450px">
                                         <hr>
                                         <div>
                                             <p><strong> Image Path</strong></p>
-                                            <h5>{{image_service}}</h5>
+                                            <p>{{image_service}}</p>
                                         </div>
                                     </td>
                                     <td width="5%">{{moment created_at format="YYYY/MM/DD hh:mm:ss"}}</td>

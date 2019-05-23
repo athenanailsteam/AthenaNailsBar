@@ -35,15 +35,12 @@ router.post('/', (req, res) => {
                 res.render('service_admin', {
                     layout: 'main_admin',
                     services: rows,
-                    dir: dir,
-                    file: `../img/upload/${req.file.filename}`,
                 });
             } else {
                 req.flash('success', 'File Uploaded!');
                 res.render('service_admin', {
                     layout: 'main_admin',
                     services: rows,
-                    dir: dir
                 });
             }
         })
@@ -59,7 +56,7 @@ router.get('/edit', (req, res) => {
     });
 });
 router.get('/add', (req, res) => {
-    res.render('edit_services_admin', {
+    res.render('add_services_admin', {
         layout: 'main_admin',
     });
 });
