@@ -70,8 +70,8 @@
         $.map(frmUn, function (n, i) {
             frm[n['name']] = n['value'];
         });
-        var schedule = $('#schedule').text();      
-        frm['schedule_booking'] =   moment.parseZone(schedule).utc().format("YYYY-MM-DD HH:mm:ss");
+        var schedule = $('#schedule').text();
+        frm['schedule_booking'] = moment.parseZone(schedule).utc().format("YYYY-MM-DD HH:mm:ss");
 
         console.log(JSON.stringify(frm));
         $.ajax({
@@ -83,11 +83,11 @@
             complete: () => console.log('completed submit form book'),
             success: (rs => {
                 console.log('book schedule success');
-                window.location.replace('/');
+                window.location.reload('/');
             }),
             error: (error => {
                 console.log(error);
-                window.location.replace('/');
+                window.location.reload('/');
             })
         });
         return false;

@@ -62,35 +62,42 @@
                                         class="btn btn-outline-primary btn-block">12:30 PM</button>
                                 </div>
                                 <div class="col-4 p-1">
-                                    <button type="button" value="1:00 PM" onclick="showBookingForm(9)" id="hour9" class="btn btn-outline-primary btn-block">1:00
+                                    <button type="button" value="1:00 PM" onclick="showBookingForm(9)" id="hour9"
+                                        class="btn btn-outline-primary btn-block">1:00
                                         PM</button>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-4 p-1">
-                                    <button type="button" onclick="showBookingForm(10)" id="hour10" value="2:00 PM" class="btn btn-outline-primary btn-block">2:00
+                                    <button type="button" onclick="showBookingForm(10)" id="hour10" value="2:00 PM"
+                                        class="btn btn-outline-primary btn-block">2:00
                                         PM</button>
                                 </div>
                                 <div class="col-4 p-1">
-                                    <button type="button" onclick="showBookingForm(11)" id="hour11" value="2:30 PM" class="btn btn-outline-primary btn-block">2:30
+                                    <button type="button" onclick="showBookingForm(11)" id="hour11" value="2:30 PM"
+                                        class="btn btn-outline-primary btn-block">2:30
                                         PM</button>
                                 </div>
                                 <div class="col-4 p-1">
-                                    <button type="button" onclick="showBookingForm(12)" id="hour12" value="3:00 PM" class="btn btn-outline-primary btn-block">3:00
+                                    <button type="button" onclick="showBookingForm(12)" id="hour12" value="3:00 PM"
+                                        class="btn btn-outline-primary btn-block">3:00
                                         PM</button>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-4 p-1">
-                                    <button type="button" onclick="showBookingForm(13)" id="hour13" value="3:30 PM" class="btn btn-outline-primary btn-block">3:30
+                                    <button type="button" onclick="showBookingForm(13)" id="hour13" value="3:30 PM"
+                                        class="btn btn-outline-primary btn-block">3:30
                                         PM</button>
                                 </div>
                                 <div class="col-4 p-1">
-                                    <button type="button" onclick="showBookingForm(14)" id="hour14" value="4:00 PM" class="btn btn-outline-primary btn-block">4:00
+                                    <button type="button" onclick="showBookingForm(14)" id="hour14" value="4:00 PM"
+                                        class="btn btn-outline-primary btn-block">4:00
                                         PM</button>
                                 </div>
                                 <div class="col-4 p-1">
-                                    <button type="button" onclick="showBookingForm(15)" id="hour15" value="4:30 PM" class="btn btn-outline-primary btn-block">4:30
+                                    <button type="button" onclick="showBookingForm(15)" id="hour15" value="4:30 PM"
+                                        class="btn btn-outline-primary btn-block">4:30
                                         PM</button>
                                 </div>
                             </div>
@@ -122,8 +129,8 @@
 
         $('#modalDateTime').modal("hide");
 
-        var schedule = moment(document.getElementById("choosedate").value).format("dddd, MMMM DD YYYY") + ", " + $('button#hour'+id).val()
-               
+        var schedule = moment(document.getElementById("choosedate").value).format("dddd, MMMM DD YYYY") + ", " + $('button#hour' + id).val()
+
         document.getElementById("schedule").innerHTML = schedule;
 
     }

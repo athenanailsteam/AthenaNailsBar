@@ -4,7 +4,7 @@ var moment = require('moment');
 var bookDb = require('../model/schedule_book');
 
 router.use(require('../middlewares/local.mdw'));
-
+router.use(require('../middlewares/local.mdw.employees'));
 // router app
 router.use("/", require('./home'));
 router.use("/contact", require('./contact'));
@@ -21,11 +21,9 @@ router.post("/booking", (req, res) => {
         //TODO: add field created by and author name
         rs.then(row => {
             console.log("Add schedule success");
-            // res.redirect('../');
             res.json(row.insertId);
         }).catch(err => {
             console.log('Add schedule failed cause: ' + err);
-            res.redirect('../');
         });
     }
 });
