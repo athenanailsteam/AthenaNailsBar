@@ -7,8 +7,8 @@ router.get('/', (req, res) => {
     var s = listAdminServiceModel.findAll();
     s.then(rows => {
         console.log(rows);
-        res.render('service_admin', {
-            layout: 'main_admin',
+        res.render('admin/service_admin', {
+            layout: 'layouts/main_admin',
             services: rows,
         });
     }).catch(err => {
@@ -32,14 +32,14 @@ router.post('/', (req, res) => {
             console.log(dir);
             if (err) {
                 req.flash('error', 'No File Selected');
-                res.render('service_admin', {
-                    layout: 'main_admin',
+                res.render('admin/service_admin', {
+                    layout: 'layouts/main_admin',
                     services: rows,
                 });
             } else {
                 req.flash('success', 'File Uploaded!');
-                res.render('service_admin', {
-                    layout: 'main_admin',
+                res.render('admin/service_admin', {
+                    layout: 'layouts/main_admin',
                     services: rows,
                 });
             }
@@ -51,13 +51,13 @@ router.post('/', (req, res) => {
 });
 router.get('/edit', (req, res) => {
     console.log(req.query.id);
-    res.render('edit_services_admin', {
-        layout: 'main_admin',
+    res.render('admin/edit_services_admin', {
+        layout: 'layouts/main_admin',
     });
 });
 router.get('/add', (req, res) => {
-    res.render('add_services_admin', {
-        layout: 'main_admin',
+    res.render('admin/add_services_admin', {
+        layout: 'layouts/main_admin',
     });
 });
 module.exports = router;

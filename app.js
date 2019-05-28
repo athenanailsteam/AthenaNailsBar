@@ -1,6 +1,6 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
-var index = require('./routes/index');
+var index = require('./apps/routes/index');
 var bodyParser = require("body-parser");
 var session = require('express-session');
 var passport = require('passport');
@@ -30,17 +30,18 @@ app.use((req, res, next) =>{
     next();
 });
 
-app.engine('hbs', exphbs({
-    extname: 'hbs',
-    defaultLayout: 'main',
-    layoutsDir: __dirname + '/views/layouts/',
-    partialsDir: [
-        'views/admin',
-        'views/client'
-    ]
-})
-);
-app.set('view engine', 'hbs');
+//set up engine 
+app.set("views", __dirname + "/apps/views")
+app.set("view engine", "hbs");
+var handlebars = require("express-handlebars").create({
+  extname: 'hbs',
+  defaultLayout: 'index',
+  layoutsDir: __dirname + "/apps/views",
+  partialsDir: [
+    __dirname + '/apps/views/partial'
+]
+});
+app.engine('hbs', handlebars.engine);
 //set moment helper for handlebars
 var Handlebars = require("handlebars");
 var MomentHandler = require("handlebars.moment");

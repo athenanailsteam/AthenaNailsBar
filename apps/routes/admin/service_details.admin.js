@@ -11,8 +11,8 @@ router.get('/', (req, res) => {
     var d = listDetailsAdminServicesModel.loadServiceDescription('service_detail', id)
     d.then(a => {
         console.log(a);
-        res.render('service_detail_admin', {
-            layout: 'main_admin',
+        res.render('admin/service_detail_admin', {
+            layout: 'layouts/main_admin',
             servicesDetail: a,
             id: id
         });

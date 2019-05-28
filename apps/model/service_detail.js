@@ -1,4 +1,4 @@
-var db = require('../utils/db');
+var db = require("../../utils/db");
 module.exports = {
     loadServiceDescription: (tableName, id) => {
         var conn = db.getConnection();      

@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
     var b = bookingModel.getAllScheduleBook(date);
     b.then(rows => {
         console.log(rows);
-        res.render('schedule_appointment', {
-            layout: 'main_admin',
+        res.render('admin/schedule_appointment', {
+            layout: 'layouts/main_admin',
             booking: rows,
             date: date
         });
