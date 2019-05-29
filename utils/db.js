@@ -2,11 +2,11 @@ var mysql = require('mysql');
 var utils = require('../apps/helpers/helper')
 var createConnection = () => {
     return mysql.createConnection({
-        host: 'db4free.net',
+        host: 'localhost',
         port: '3306',
-        user: 'athenanails',
-        password: 'trieunq02071998',
-        database: 'athenanails'
+        user: 'root',
+        password: 'root',
+        database: 'athena_nails'
     });
 };
 function getConnection(){
