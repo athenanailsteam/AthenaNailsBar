@@ -10,10 +10,13 @@ router.use("/", require('./home'));
 router.use("/contact", require('./contact'));
 router.use("/aboutus", require('./aboutus'));
 router.use("/services", require('./service'));
+const { ensureAuthenticated, forwardAuthenticated } = require('../middlewares/local.mdw.auth');
 
-router.use("/admin", require('./admin/index'));
+router.use("/admin", ensureAuthenticated ,require('./admin/index'));
 
 router.use("/login", require('./admin/login'));
+router.use("/logout", require('./admin/logout'));
+
 router.post("/booking", (req, res) => {
     var entity = req.body;
     if (entity) {

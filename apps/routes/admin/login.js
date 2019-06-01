@@ -25,22 +25,36 @@ passport.deserializeUser(function (id, cb) {
     user.findById(id).then(user => {
         cb(null, user);
     })
-    .catch(err => {
-        if (err) {
-            return cb(err);
-        }
-    });
+        .catch(err => {
+            if (err) {
+                return cb(err);
+            }
+        });
 });
 
 router.get("/", function (req, res) {
-    res.render("login", {layout: false });
+    res.render("login", { layout: false });
 });
 
-router.post('/',
-    passport.authenticate('local',{ 
-        successRedirect: 'admin/booking',
-        failureRedirect: '/login',
-        failureFlash: true })
-);
+router.post('/', (req, res, next) => {
+    passport.authenticate('local', (err, user, info) => {
+        if (err)
+            return next(err);
+
+        if (!user) {
+            return res.render('vwAccount/login', {
+                layout: false,
+                err_message: info.message
+            })
+        }
+
+        req.logIn(user, err => {
+            if (err)
+                return next(err);
+
+            return res.redirect('/admin');
+        });
+    })(req, res, next);
+});
 
 module.exports = router;

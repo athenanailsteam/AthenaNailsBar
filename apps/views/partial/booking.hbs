@@ -22,12 +22,12 @@
                     <div class="form-group">
                         <label for="inputFullName">Full Name</label>
                         <input type="text" class="form-control" id="inputFullName" name="customer_name"
-                            aria-describedby="emailHelp" placeholder="Enter Full Name">
+                            aria-describedby="emailHelp" placeholder="Enter Full Name" required>
                     </div>
                     <div class="form-group">
                         <label for="inputPhoneNumber">Phone Number</label>
                         <input type="number" class="form-control" id="inputPhoneNumber" name="phone_number"
-                            placeholder="Phone Number">
+                            placeholder="Phone Number" required>
                     </div>
                     <div class="form-group">
                         <label for="selectServices">Choose Services</label>
@@ -45,6 +45,7 @@
                             {{/each}}
                         </select>
                     </div>
+                    
                 </form>
             </div>
             <div class="modal-footer w-100 justify-content-between" style="height: 120; padding: 2%">
@@ -53,10 +54,9 @@
 
                 </div>
                 <div class="float-right justify-content-end m-r-19">
-                    <button type="button" onclick="booknow()" class="btn"
+                    <button type="submit" class="btn" onclick="booknow()"
                         style="background-color: #bca858; color: white; font-family: serif; text-transform: uppercase">book
                         now</button>
-
                 </div>
             </div>
         </div>
