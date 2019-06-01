@@ -42,9 +42,8 @@ router.post('/', (req, res, next) => {
             return next(err);
 
         if (!user) {
-            return res.render('vwAccount/login', {
-                layout: false,
-                err_message: info.message
+            return res.render('login', {
+                layout: false
             })
         }
 

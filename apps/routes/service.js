@@ -20,7 +20,8 @@ router.get('/', (req, res) => {
         res.render('client/service', {
             layout: 'layouts/main',
             serviceDescription: a,
-            id: id
+            id: id,
+            isActive : true
         });
     }).catch(err => {
         console.log(err);
