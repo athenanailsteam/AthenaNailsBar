@@ -14,7 +14,7 @@ const { ensureAuthenticated, forwardAuthenticated } = require('../middlewares/lo
 
 router.use("/admin", ensureAuthenticated ,require('./admin/index'));
 
-router.use("/login", require('./admin/login'));
+router.use("/login", forwardAuthenticated, require('./admin/login'));
 router.use("/logout", require('./admin/logout'));
 
 router.post("/booking", (req, res) => {
