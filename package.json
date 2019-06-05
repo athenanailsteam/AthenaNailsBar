@@ -14,8 +14,10 @@
     "bcrypt": "^3.0.6",
     "body-parser": "^1.18.3",
     "config": "^3.1.0",
+    "connect-flash": "^0.1.1",
     "express": "^4.17.0",
     "express-handlebars": "^3.0.2",
+    "express-handlebars-sections": "^1.0.1",
     "express-session": "^1.16.1",
     "handlebars-helpers": "^0.10.0",
     "handlebars.moment": "^1.0.4",
@@ -26,7 +28,6 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "promise": "^8.0.3",
-    "connect-flash": "^0.1.1"
+    "promise": "^8.0.3"
   }
 }

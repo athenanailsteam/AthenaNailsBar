@@ -1,32 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var listAdminServiceModel = require('../../model/list_services');
-var app = express.Router();
-var multer = require('multer');
-
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, './publics/img/upload/');
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.originalname);
-    }
-})
-
-var upload = multer({ storage });
-
-app.post('/upload', (req, res, next) => {
-    upload.array('fuMain')(req, res, err => {
-        if (err) {
-            console.log(err);
-            return res.json({
-                error: err.message
-            });
-        }
-
-        res.json({});
-    })
-})
 
 router.get('/', (req, res) => {
     var s = listAdminServiceModel.findAll();
@@ -51,4 +25,28 @@ router.get('/add', (req, res) => {
         layout: 'layouts/main_admin',
     });
 });
+var multer = require('multer');
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './publics/img/upload');
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    }
+})
+
+var upload = multer({ storage });
+
+router.post('/upload', (req, res, next) => {
+    upload.array('fuMain')(req, res, err => {
+        if (err) {
+            return res.json({
+                error: err.message
+            });
+        }
+        res.json({});
+    })
+})
+
 module.exports = router;
