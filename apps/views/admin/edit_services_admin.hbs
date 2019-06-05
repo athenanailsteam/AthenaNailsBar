@@ -4,8 +4,7 @@
             <div class="masonry-item col-md-12">
                 <div class="card shadow mb-4">
                     <div class="text-center card-header py-3 text-center">
-                        <h3 style="font-weight: bold; color: #029a00"><a href="/writer/add-content"></a>EDIT SERVICE
-                        </h3>
+                        <h3 style="font-weight: bold; color: #029a00"><a></a>EDIT SERVICE</h3>
                     </div>
                     <div class="card-body">
                         <div class="mt-30">
@@ -18,38 +17,37 @@
                                             placeholder="Type name of service">{{post.title}}</textarea></div>
                                     <div class="form-group col-md-8"><label for="summary_content">
                                         <form action="#" method="POST" enctype="multipart/form-data">
-                                            <h4>Choose Name</h4>
+                                            <h4>Choose Image</h4>
                                             <span>
                                                 <input type="file" name="file" />
                                             </span>
                                         </form>
-                                    </div>  
-                                </div>
-                        </div>                   
+                                    </div> 
+                                <div class="form-group col-md-8">
+                                    <label for="title">
+                                    <h4>Image Url</h4>
+                                    </label>
+                                <textarea rows="1" type="text" class="form-control" id="title" name="title"
+                                    placeholder="Autogenerate when choose image to upload url">{{post.title}}</textarea></div>                                          
+                                </div>             
+                                <hr>
+                                {{#if success}}
+                                    <div class="alert alert-success" role="alert">
+                                        {{success}}
+                                    </div>
+                                    {{/if}}
+                                    {{#if error}}
+                                    <div class="alert alert-success" role="alert">
+                                        {{error}}
+                                    </div>
+                                {{/if}}                        
+                            </form>
+                        </div>
+                        <button type="submit" href="/" class="btn btn-primary mr-2 ml-2 mb-3">EDIT>>></button>                        
                     </div>
-                    <div class="form-group col-md-8">
-                        <label for="title">
-                        <h4>Image Url</h4>
-                        </label>
-                    <textarea rows="1" type="text" class="form-control" id="title" name="title"
-                        placeholder="Autogenerate when choose image to upload url">{{post.title}}</textarea></div
-                    <hr>
-                    <button type="submit" href="/" class="btn btn-primary mr-2 ml-2 mb-3">EDIT SERVICE</button>
-                        {{#if success}}
-                        <div class="alert alert-success" role="alert">
-                            {{success}}
-                        </div>
-                        {{/if}}
-                        {{#if error}}
-                        <div class="alert alert-success" role="alert">
-                            {{error}}
-                        </div>
-                        {{/if}}                        
-                    </form>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </main>
 

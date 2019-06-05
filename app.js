@@ -1,5 +1,4 @@
 var express = require('express');
-var exphbs = require('express-handlebars');
 var index = require('./apps/routes/index');
 var bodyParser = require("body-parser");
 var session = require('express-session');
@@ -7,6 +6,7 @@ var passport = require('passport');
 var morgan = require('morgan');
 var flash = require("connect-flash");
 var port = process.env.PORT|| 3000;
+var hbs_sections = require('express-handlebars-sections');
 
 var app = express();
 
@@ -29,6 +29,7 @@ app.use((req, res, next) =>{
     
     next();
 });
+// require('./apps/middlewares/upload')(app);
 
 //set up engine 
 app.set("views", __dirname + "/apps/views")
@@ -38,8 +39,10 @@ var handlebars = require("express-handlebars").create({
   defaultLayout: 'index',
   layoutsDir: __dirname + "/apps/views",
   partialsDir: [
-    __dirname + '/apps/views/partial'
-]
+    __dirname + '/apps/views/partial'],
+    helpers: {
+        section: hbs_sections()
+    }
 });
 app.engine('hbs', handlebars.engine);
 //set moment helper for handlebars
