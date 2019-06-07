@@ -9,14 +9,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/themes/fas/theme.min.js"></script>
 <script>
     $(function () {
-        $('#fuMain').fileinput({
+        $("#fuMain").fileinput({
             theme: 'fas',
             dropZoneEnabled: false,
             allowedFileExtensions: ['png', 'jpg', 'gif'],
             uploadUrl: './upload',
             uploadAsync: false,
+        }).on('fileuploaded', function (event, previewId, index, fileId) {
+            console.log('File Uploaded', 'ID: ' + fileId + ', Thumb ID: ' + previewId);
+        }).on('fileuploaderror', function (event, data, msg) {
+            console.log('File Upload Error', 'ID: ' + data.fileId + ', Thumb ID: ' + data.previewId);
+        }).on('filebatchuploadcomplete', function (event, preview, config, tags, extraData) {
+            console.log('File Batch Uploaded', preview, config, tags, extraData);
         });
+
     })
+
 </script>
 {{/section}}
 <main class="main-content">
@@ -32,34 +40,31 @@
                             <form id="formAddPost">
                                 <div class="form-row">
                                     <div class="form-group col-md-8"><label for="title">
-                                            <h4>Service Name</h4>
+                                        <h4>Service Name</h4>
                                         </label>
-                                        <textarea rows="1" type="text" class="form-control" id="title" name="title"
-                                            placeholder="Type name of service"></textarea></div>
-                                    <div class="card shadow">
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <h4 class="card-header">
-                                            Upload with Bootstrap FileInput
-                                        </h4>
-                                        <div class="card-body">
-                                            <form method="POST">
-                                                <div class="form-group">
-                                                    <label for="fuMain">Photo</label>
-                                                    <div class="file-loading">
-                                                        <input id="fuMain" name="fuMain" type="file" multiple>
-                                                    </div>
+                                        <textarea rows="1" type="text" class="form-control" id="serviceName"
+                                            name="services_name" placeholder="Type name of service"></textarea>
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <form method="POST">
+                                            <div class="form-group">
+                                                <label for="fuMain">
+                                                    <h4>Upload Image</h4>
+                                                </label>
+                                                <div class="file-loading">
+                                                    <input id="fuMain" name="fuMain" type="file">
                                                 </div>
-                                            </form>
-                                        </div>
+                                            </div>
+                                        </form>
                                     </div>
                                     <div class="form-group col-md-8">
                                         <label for="title">
                                             <h4>Image Url</h4>
                                         </label>
-                                        <textarea rows="1" type="text" class="form-control" id="title" name="title"
-                                            placeholder="Autogenerate when choose image to upload url"></textarea></div>
+                                        <textarea rows="1" type="text" class="form-control" id="imageUrl"
+                                            name="image_service"
+                                            placeholder="Autogenerate when choose image to upload url">{{this.dir}}</textarea>
+                                    </div>
                                 </div>
                                 <hr>
                                 {{#if success}}
@@ -74,10 +79,39 @@
                                 {{/if}}
                             </form>
                         </div>
-                        <button type="submit" href="/" class="btn btn-primary mr-2 ml-2 mb-3">EDIT>>></button>
+                        <button type="submit" onclick="addService()"class="btn btn-primary mr-2 ml-2 mb-3">
+                            ADD>>>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
+<script>
+    function addService() {
+        var frmUn = $('form#formAddPost').serializeArray();
+        var frm = {};
+        $.map(frmUn, function (n, i) {
+            frm[n['name']] = n['value'];
+        });
+        console.log(JSON.stringify(frm));
+        $.ajax({
+            url: './add',
+            method: 'POST',
+            dataType: 'json',
+            contentType: 'application/json',
+            data: JSON.stringify(frm),
+            complete: () => console.log('completed submit form service'),
+            success: (rs => {
+                console.log('add service success');
+                window.location.reload('/');
+            }),
+            error: (error => {
+                console.log(error);
+                window.location.reload('/');
+            })
+        });
+        return false;
+    }
+</script>

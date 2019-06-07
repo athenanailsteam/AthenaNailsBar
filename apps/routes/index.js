@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var moment = require('moment');
 var bookDb = require('../model/schedule_book');
 
 router.use(require('../middlewares/local.mdw'));
