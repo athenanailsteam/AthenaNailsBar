@@ -48,7 +48,12 @@ router.post('/upload', (req, res, next) => {
                 error: err.message
             });
         }
-        res.json({dir : './img/upload/' + filename});
+        else {
+            return res.send(dir);
+            return res.render({dir: dir});
+            return res.json({dir:dir})
+        }
+
     })
 })
 router.post("/add", (req, res) => {

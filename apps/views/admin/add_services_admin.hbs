@@ -12,19 +12,12 @@
         $("#fuMain").fileinput({
             theme: 'fas',
             dropZoneEnabled: false,
+            showCancel: false,
             allowedFileExtensions: ['png', 'jpg', 'gif'],
             uploadUrl: './upload',
             uploadAsync: false,
-        }).on('fileuploaded', function (event, previewId, index, fileId) {
-            console.log('File Uploaded', 'ID: ' + fileId + ', Thumb ID: ' + previewId);
-        }).on('fileuploaderror', function (event, data, msg) {
-            console.log('File Upload Error', 'ID: ' + data.fileId + ', Thumb ID: ' + data.previewId);
-        }).on('filebatchuploadcomplete', function (event, preview, config, tags, extraData) {
-            console.log('File Batch Uploaded', preview, config, tags, extraData);
         });
-
     })
-
 </script>
 {{/section}}
 <main class="main-content">
@@ -63,7 +56,7 @@
                                         </label>
                                         <textarea rows="1" type="text" class="form-control" id="imageUrl"
                                             name="image_service"
-                                            placeholder="Autogenerate when choose image to upload url">{{this.dir}}</textarea>
+                                            placeholder="Autogenerate when choose image to upload url">{{dir}}</textarea>
                                     </div>
                                 </div>
                                 <hr>
