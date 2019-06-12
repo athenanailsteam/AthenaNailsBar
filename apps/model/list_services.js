@@ -2,8 +2,14 @@ var db = require("../../utils/db");
 function addListService(entity){
     return db.add('list_services', entity);
 }
-function updateListService(idField,entity){
-    return db.update('list_services',idField, entity);
+function updateListService(id,entity){
+    return db.update('list_services','id',id, entity);
+}
+function findServiceById(id){
+    return db.findById('list_services', id);
+}
+function deleteListService(id){
+    return db.delete('list_services','id', id);
 }
 module.exports = {
    findAll: () => {
@@ -11,5 +17,7 @@ module.exports = {
    },
    addListService: addListService,
    updateListService: updateListService,
+   findServiceById: findServiceById,
+   deleteListService: deleteListService,
 
 }

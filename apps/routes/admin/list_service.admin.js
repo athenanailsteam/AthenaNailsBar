@@ -5,7 +5,6 @@ var listAdminServiceModel = require('../../model/list_services');
 router.get('/', (req, res) => {
     var s = listAdminServiceModel.findAll();
     s.then(rows => {
-        console.log(rows);
         res.render('admin/service_admin', {
             layout: 'layouts/main_admin',
             services: rows,
@@ -15,9 +14,15 @@ router.get('/', (req, res) => {
     });
 });
 router.get('/edit', (req, res) => {
-    console.log(req.query.id);
-    res.render('admin/edit_services_admin', {
-        layout: 'layouts/main_admin',
+    var rs = listAdminServiceModel.findServiceById(req.query.id);
+    rs.then(rows => {
+        res.render('admin/edit_services_admin', {
+            layout: 'layouts/main_admin',
+            id: req.query.id,
+            dataService: rows,
+        });
+    }).catch(err => {
+        console.log(err);
     });
 });
 router.get('/add', (req, res) => {
@@ -35,23 +40,16 @@ var storage = multer.diskStorage({
         cb(null, file.originalname);
     }
 })
-
 var upload = multer({ storage });
-
 router.post('/upload', (req, res, next) => {
     upload.single('fuMain')(req, res, err => {
-        var filename = path.basename(req.file.path);
-        var dir = './img/upload/' + filename;
-        console.log(dir);
         if (err) {
             return res.json({               
                 error: err.message
             });
         }
         else {
-            return res.send(dir);
-            return res.render({dir: dir});
-            return res.json({dir:dir})
+            return res.json({});
         }
 
     })
@@ -65,6 +63,31 @@ router.post("/add", (req, res) => {
             res.json(row.insertId);
         }).catch(err => {
             console.log('Add service failed cause: ' + err);
+        });
+    }
+})
+router.post("/edit", (req, res) => {
+    var entity = req.body;
+    console.log(req.query.id)
+    if (entity) {
+        var rs = listAdminServiceModel.updateListService(req.query.id,entity);
+        rs.then(row => {
+            console.log("Update service success");
+            res.redirect('/admin/manage-services')
+        }).catch(err => {
+            console.log('Update  service failed cause: ' + err);
+        });
+    }
+})
+router.post("/delete", (req, res) => {
+    console.log(req.query.id)
+    if (req.query.id) {
+        var rs = listAdminServiceModel.deleteListService(req.query.id);
+        rs.then(row => {
+            console.log("delete service success");
+            res.redirect('/admin/manage-services')
+        }).catch(err => {
+            console.log('detele  service failed cause: ' + err);
         });
     }
 })

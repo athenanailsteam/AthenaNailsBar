@@ -1,7 +1,6 @@
 {{#section 'css'}}
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/css/fileinput.min.css" media="all"
     rel="stylesheet" type="text/css" />
-
 {{/section}}
 
 {{#section 'js'}}
@@ -16,7 +15,21 @@
             allowedFileExtensions: ['png', 'jpg', 'gif'],
             uploadUrl: './upload',
             uploadAsync: false,
+        }).on('filebatchuploadsuccess', function (event, data) {
+            $.each(data.files, function (key, file) {
+                var fname = file.name;
+                var out = '../img/upload/'+ fname;
+                $('#imageUrl').val(out);
+            });
+        })
+        .on('fileuploaded', function (event, data) {
+            $.each(data.files, function (key, file) {
+                var fname = file.name;
+                var out = '../img/upload/' + fname;
+                $('#imageUrl').val(out);
+            });
         });
+        
     })
 </script>
 {{/section}}
@@ -33,7 +46,7 @@
                             <form id="formAddPost">
                                 <div class="form-row">
                                     <div class="form-group col-md-8"><label for="title">
-                                        <h4>Service Name</h4>
+                                            <h4>Service Name</h4>
                                         </label>
                                         <textarea rows="1" type="text" class="form-control" id="serviceName"
                                             name="services_name" placeholder="Type name of service"></textarea>
@@ -56,23 +69,13 @@
                                         </label>
                                         <textarea rows="1" type="text" class="form-control" id="imageUrl"
                                             name="image_service"
-                                            placeholder="Autogenerate when choose image to upload url">{{dir}}</textarea>
+                                            placeholder="Autogenerate when choose image to upload url"></textarea>
                                     </div>
                                 </div>
                                 <hr>
-                                {{#if success}}
-                                <div class="alert alert-success" role="alert">
-                                    {{success}}
-                                </div>
-                                {{/if}}
-                                {{#if error}}
-                                <div class="alert alert-success" role="alert">
-                                    {{error}}
-                                </div>
-                                {{/if}}
                             </form>
                         </div>
-                        <button type="submit" onclick="addService()"class="btn btn-primary mr-2 ml-2 mb-3">
+                        <button type="submit" onclick="addService()" class="btn btn-primary mr-2 ml-2 mb-3">
                             ADD>>>
                         </button>
                     </div>
