@@ -1,6 +1,6 @@
 {{#section 'css'}}
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/css/fileinput.min.css" media="all"
-    rel="stylesheet" type="text/css"/>
+    rel="stylesheet" type="text/css" />
 {{/section}}
 
 {{#section 'js'}}
@@ -18,18 +18,18 @@
         }).on('filebatchuploadsuccess', function (event, data) {
             $.each(data.files, function (key, file) {
                 var fname = file.name;
-                var out = '../img/upload/'+ fname;
-                $('#imageUrl').val(out);
-            });
-        })
-        .on('fileuploaded', function (event, data) {
-            $.each(data.files, function (key, file) {
-                var fname = file.name;
                 var out = '../img/upload/' + fname;
                 $('#imageUrl').val(out);
             });
-        });
-        
+        })
+            .on('fileuploaded', function (event, data) {
+                $.each(data.files, function (key, file) {
+                    var fname = file.name;
+                    var out = '../img/upload/' + fname;
+                    $('#imageUrl').val(out);
+                });
+            });
+
     })
 </script>
 {{/section}}
@@ -43,44 +43,43 @@
                     </div>
                     <div class="card-body">
                         <div class="mt-30">
-                                <form id="formAddPost">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-8"><label for="title">
-                                                <h4>Service Name</h4>
-                                            </label>
-                                            <textarea rows="1" type="text" class="form-control" id="serviceName"
-                                                name="services_name">{{dataService.services_name}}</textarea>
-                                        </div>
-                                        <div class="form-group col-md-8">
-                                            <form method="POST">
-                                                <div class="form-group">
-                                                    <label for="fuMain">
-                                                        <h4>Upload Image</h4>
-                                                    </label>
-                                                    <div class="file-loading">
-                                                        <input id="fuMain" name="fuMain" type="file">
-                                                    </div>
+                            <form id="formAddPost">
+                                <div class="form-row">
+                                    <div class="form-group col-md-8"><label for="title">
+                                            <h4>Service Name</h4>
+                                        </label>
+                                        <textarea rows="1" type="text" class="form-control" id="serviceName"
+                                            name="services_name">{{dataService.services_name}}</textarea>
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <form method="POST">
+                                            <div class="form-group">
+                                                <label for="fuMain">
+                                                    <h4>Upload Image</h4>
+                                                </label>
+                                                <div class="file-loading">
+                                                    <input id="fuMain" name="fuMain" type="file">
                                                 </div>
-                                            </form>
-                                        </div>
-                                        <div class="form-group col-md-8">
-                                            <label for="title">
-                                                <h4>Image Url</h4>
-                                            </label>
-                                            <textarea rows="1" type="text" class="form-control" id="imageUrl"
-                                                name="image_service"
-                                                placeholder="Autogenerate when choose image to upload url"
-                                                    >{{dataService.image_service}}</textarea>
-                                        </div>
-                                    </div>  
-                                    <hr>
-                                </form>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <label for="title">
+                                            <h4>Image Url</h4>
+                                        </label>
+                                        <textarea rows="1" type="text" class="form-control" id="imageUrl"
+                                            name="image_service"
+                                            placeholder="Autogenerate when choose image to upload url">{{dataService.image_service}}</textarea>
+                                    </div>
+                                </div>
+                                <hr>
+                            </form>
 
                         </div>
-                        <button type="submit" onclick="backListService()" class="btn btn-warning mr-2 ml-2 mb-3">
+                        <button type="button" onclick="backListService()" class="btn btn-warning mr-2 ml-2 mb-3">
                             BACK
                         </button>
-                        <button type="submit" onclick="deteleService({{id}})" class="btn btn-warning mr-2 ml-2 mb-3">
+                        <button type="button" onclick="deleteService({{id}})" class="btn btn-warning mr-2 ml-2 mb-3">
                             DELETE
                         </button>
                         <span></span>
@@ -103,7 +102,7 @@
         });
         console.log(JSON.stringify(frm));
         $.ajax({
-            url: './edit?id='+ id,
+            url: './edit?id=' + id,
             method: 'POST',
             dataType: 'json',
             contentType: 'application/json',
@@ -119,14 +118,14 @@
             })
         });
         return false;
-}
-//delete post
+    }
+    //delete post
     function deleteService(id) {
         $.ajax({
-            url: './delete?id='+ id,
+            url: './delete',
             method: 'POST',
             dataType: 'json',
-            data: {id: id},
+            data: {id:id},
             complete: () => console.log('completed submit form service'),
             success: (rs => {
                 console.log('update service success');
@@ -138,9 +137,9 @@
             })
         });
         return false;
-}
-//back service
-function backListService() {
-    window.location.replace('/admin/manage-services');
-}
+    }
+    //back service
+    function backListService() {
+        window.location.replace('/admin/manage-services');
+    }
 </script>

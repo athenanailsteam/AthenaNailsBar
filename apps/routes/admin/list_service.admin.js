@@ -80,9 +80,8 @@ router.post("/edit", (req, res) => {
     }
 })
 router.post("/delete", (req, res) => {
-    console.log(req.query.id)
-    if (req.query.id) {
-        var rs = listAdminServiceModel.deleteListService(req.query.id);
+    if (req.body.id) {
+        var rs = listAdminServiceModel.deleteListService(req.body.id);
         rs.then(row => {
             console.log("delete service success");
             res.redirect('/admin/manage-services')
