@@ -73,7 +73,7 @@ router.post("/edit", (req, res) => {
         var rs = listAdminServiceModel.updateListService(req.query.id,entity);
         rs.then(row => {
             console.log("Update service success");
-            res.redirect('/admin/manage-services')
+            res.redirect('/admin/services-details')
         }).catch(err => {
             console.log('Update  service failed cause: ' + err);
         });

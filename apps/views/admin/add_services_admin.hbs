@@ -18,14 +18,14 @@
         }).on('filebatchuploadsuccess', function (event, data) {
             $.each(data.files, function (key, file) {
                 var fname = file.name;
-                var out = '../img/upload/'+ fname;
+                var out = '/img/upload/'+ fname;
                 $('#imageUrl').val(out);
             });
         })
         .on('fileuploaded', function (event, data) {
             $.each(data.files, function (key, file) {
                 var fname = file.name;
-                var out = '../img/upload/' + fname;
+                var out = '/img/upload/' + fname;
                 $('#imageUrl').val(out);
             });
         });
@@ -39,7 +39,7 @@
             <div class="masonry-item col-md-12">
                 <div class="card shadow mb-4">
                     <div class="text-center card-header py-3 text-center">
-                        <h3 style="font-weight: bold; color: #029a00"><a></a>EDIT SERVICE</h3>
+                        <h3 style="font-weight: bold; color: #029a00"><a></a>ADD SERVICE</h3>
                     </div>
                     <div class="card-body">
                         <div class="mt-30">
@@ -75,8 +75,11 @@
                                 <hr>
                             </form>
                         </div>
+                        <button type="button" onclick="backListService()" class="btn btn-warning mr-2 ml-2 mb-3">
+                            BACK
+                        </button>
                         <button type="submit" onclick="addService()" class="btn btn-primary mr-2 ml-2 mb-3">
-                            ADD>>>
+                            ADD
                         </button>
                     </div>
                 </div>
@@ -109,5 +112,9 @@
             })
         });
         return false;
+    };
+        //back service
+    function backListService() {
+        window.location.replace('/admin/manage-services');
     }
 </script>

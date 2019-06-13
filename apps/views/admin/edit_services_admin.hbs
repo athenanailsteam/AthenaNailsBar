@@ -18,14 +18,14 @@
         }).on('filebatchuploadsuccess', function (event, data) {
             $.each(data.files, function (key, file) {
                 var fname = file.name;
-                var out = '../img/upload/' + fname;
+                var out = '/img/upload/' + fname;
                 $('#imageUrl').val(out);
             });
         })
             .on('fileuploaded', function (event, data) {
                 $.each(data.files, function (key, file) {
                     var fname = file.name;
-                    var out = '../img/upload/' + fname;
+                    var out = '/img/upload/' + fname;
                     $('#imageUrl').val(out);
                 });
             });
@@ -45,11 +45,18 @@
                         <div class="mt-30">
                             <form id="formAddPost">
                                 <div class="form-row">
-                                    <div class="form-group col-md-8"><label for="title">
+                                    <div class="form-group col-md-8">
+                                        <label for="title">
                                             <h4>Service Name</h4>
                                         </label>
                                         <textarea rows="1" type="text" class="form-control" id="serviceName"
                                             name="services_name">{{dataService.services_name}}</textarea>
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <label for="title">
+                                            <h4>Ex-Image</h4>
+                                        </label>
+                                        <img src="{{dataService.image_service}}" style="height: 450px">
                                     </div>
                                     <div class="form-group col-md-8">
                                         <form method="POST">
