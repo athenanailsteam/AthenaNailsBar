@@ -31,7 +31,11 @@
 					{{else}}
 					<p></p>
 					{{/if}}
-					<p class="text-right"><strong>{{price}}(VND)</strong></p>
+					{{#if price2}}
+					<p class="text-right"><strong>${{price}}/${{price2}}</strong></p>
+					{{else}}
+					<p class="text-right"><strong>${{price}}</strong></p>
+					{{/if}}
 				</div>
 				{{/each}}
 
