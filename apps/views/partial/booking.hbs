@@ -41,7 +41,7 @@
                         <label for="selectStaff">Choose Staff</label>
                         <select class="form-control" id="selectStaff" name="employee_id">
                             {{#each lcListEmployees}}
-                            <option id="{{id}}" value="{{id}}">{{fullname}}</option>
+                            <option id="{{id}}" value="{{id}}">{{firstname}} {{lastname}}</option>
                             {{/each}}
                         </select>
                     </div>

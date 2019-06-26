@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var bookDb = require('../model/schedule_book');
-
 router.use(require('../middlewares/local.mdw'));
 router.use(require('../middlewares/local.mdw.employees'));
+router.use(require('../middlewares/local.mdw.gallery'));
 // router app
 router.use("/", require('./home'));
 router.use("/contact", require('./contact'));

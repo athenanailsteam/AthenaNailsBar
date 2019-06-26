@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-06-26 12:29:35
+Date: 2019-06-26 17:54:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -105,6 +105,40 @@ INSERT INTO `employees` VALUES ('4', 'Linh My Thi', 'Tran', 'Linh', null, 'F', n
 INSERT INTO `employees` VALUES ('5', 'Don Thi', 'Vu', 'Don', null, 'F', null, '100', '100', null, '', null, null, null);
 
 -- ----------------------------
+-- Table structure for img_gallery
+-- ----------------------------
+DROP TABLE IF EXISTS `img_gallery`;
+CREATE TABLE `img_gallery` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT,
+  `img_dir` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of img_gallery
+-- ----------------------------
+INSERT INTO `img_gallery` VALUES ('1', 'img/img-gallery/1.jpeg', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('2', 'img/img-gallery/2.jpeg', 'drinks', null, null);
+INSERT INTO `img_gallery` VALUES ('3', 'img/img-gallery/3.jpeg', 'freestyle', null, null);
+INSERT INTO `img_gallery` VALUES ('4', 'img/img-gallery/4.jpeg', 'drinks', null, null);
+INSERT INTO `img_gallery` VALUES ('5', 'img/img-gallery/5.jpeg', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('6', 'img/img-gallery/6.jpeg', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('7', 'img/img-gallery/7.jpeg', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('8', 'img/img-gallery/8.jpeg', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('9', 'img/img-gallery/9.jpeg', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('10', 'img/img-gallery/10.jpeg', 'freestyle', null, null);
+INSERT INTO `img_gallery` VALUES ('11', 'img/img-gallery/11.jpeg', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('12', 'img/img-gallery/12.jpeg', 'freestyle', null, null);
+INSERT INTO `img_gallery` VALUES ('13', 'img/img-gallery/13.jpeg', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('14', 'img/img-gallery/14.jpeg', 'freestyle', null, null);
+INSERT INTO `img_gallery` VALUES ('15', 'img/img-gallery/15.jpeg', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('16', 'img/img-gallery/16.jpeg', 'drinks', null, null);
+INSERT INTO `img_gallery` VALUES ('17', 'img/img-gallery/17.jpg', 'freestyle', null, null);
+
+-- ----------------------------
 -- Table structure for list_services
 -- ----------------------------
 DROP TABLE IF EXISTS `list_services`;
@@ -121,12 +155,12 @@ CREATE TABLE `list_services` (
 -- ----------------------------
 -- Records of list_services
 -- ----------------------------
-INSERT INTO `list_services` VALUES ('1', 'ARTIFICIAL', '', '2019-05-12 16:56:36', '0000-00-00 00:00:00');
-INSERT INTO `list_services` VALUES ('2', 'A-LA-CARTE', '', '2019-05-12 16:56:42', null);
-INSERT INTO `list_services` VALUES ('3', 'PRINCESS MENU', '', '2019-05-12 16:56:46', null);
-INSERT INTO `list_services` VALUES ('4', 'HAIR REMOVAL', '', '2019-05-12 16:56:50', null);
-INSERT INTO `list_services` VALUES ('5', 'EYELASH', '', '2019-05-12 16:57:24', null);
-INSERT INTO `list_services` VALUES ('6', 'PEDICURES/MANICURES', '', '2019-05-12 16:58:12', null);
+INSERT INTO `list_services` VALUES ('1', 'ARTIFICIAL', 'img/img_service/sv_1.png', '2019-05-12 16:56:36', '0000-00-00 00:00:00');
+INSERT INTO `list_services` VALUES ('2', 'A-LA-CARTE', 'img/img_service/sv_5.jpeg', '2019-05-12 16:56:42', null);
+INSERT INTO `list_services` VALUES ('3', 'PRINCESS MENU', 'img/img_service/sv_4.png', '2019-05-12 16:56:46', null);
+INSERT INTO `list_services` VALUES ('4', 'HAIR REMOVAL', 'img/img_service/sv_2.png', '2019-05-12 16:56:50', null);
+INSERT INTO `list_services` VALUES ('5', 'EYELASH', 'img/img_service/sv_8.jpg', '2019-05-12 16:57:24', null);
+INSERT INTO `list_services` VALUES ('6', 'PEDICURES/MANICURES', 'img/img_service/sv_7.jpg', '2019-05-12 16:58:12', null);
 
 -- ----------------------------
 -- Table structure for schedule_booking
