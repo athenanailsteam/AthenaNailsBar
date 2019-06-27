@@ -9,6 +9,7 @@ router.use("/", require('./home'));
 router.use("/contact", require('./contact'));
 router.use("/aboutus", require('./aboutus'));
 router.use("/services", require('./service'));
+router.use("/promotion", require('./promotion'));
 const { ensureAuthenticated, forwardAuthenticated } = require('../middlewares/local.mdw.auth');
 
 router.use("/admin", ensureAuthenticated ,require('./admin/index'));
