@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-06-26 17:54:51
+Date: 2019-06-27 11:30:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -120,23 +120,19 @@ CREATE TABLE `img_gallery` (
 -- ----------------------------
 -- Records of img_gallery
 -- ----------------------------
-INSERT INTO `img_gallery` VALUES ('1', 'img/img-gallery/1.jpeg', 'nails', null, null);
-INSERT INTO `img_gallery` VALUES ('2', 'img/img-gallery/2.jpeg', 'drinks', null, null);
-INSERT INTO `img_gallery` VALUES ('3', 'img/img-gallery/3.jpeg', 'freestyle', null, null);
-INSERT INTO `img_gallery` VALUES ('4', 'img/img-gallery/4.jpeg', 'drinks', null, null);
-INSERT INTO `img_gallery` VALUES ('5', 'img/img-gallery/5.jpeg', 'nails', null, null);
-INSERT INTO `img_gallery` VALUES ('6', 'img/img-gallery/6.jpeg', 'nails', null, null);
-INSERT INTO `img_gallery` VALUES ('7', 'img/img-gallery/7.jpeg', 'nails', null, null);
-INSERT INTO `img_gallery` VALUES ('8', 'img/img-gallery/8.jpeg', 'nails', null, null);
-INSERT INTO `img_gallery` VALUES ('9', 'img/img-gallery/9.jpeg', 'nails', null, null);
-INSERT INTO `img_gallery` VALUES ('10', 'img/img-gallery/10.jpeg', 'freestyle', null, null);
-INSERT INTO `img_gallery` VALUES ('11', 'img/img-gallery/11.jpeg', 'nails', null, null);
-INSERT INTO `img_gallery` VALUES ('12', 'img/img-gallery/12.jpeg', 'freestyle', null, null);
-INSERT INTO `img_gallery` VALUES ('13', 'img/img-gallery/13.jpeg', 'nails', null, null);
-INSERT INTO `img_gallery` VALUES ('14', 'img/img-gallery/14.jpeg', 'freestyle', null, null);
-INSERT INTO `img_gallery` VALUES ('15', 'img/img-gallery/15.jpeg', 'nails', null, null);
-INSERT INTO `img_gallery` VALUES ('16', 'img/img-gallery/16.jpeg', 'drinks', null, null);
-INSERT INTO `img_gallery` VALUES ('17', 'img/img-gallery/17.jpg', 'freestyle', null, null);
+INSERT INTO `img_gallery` VALUES ('1', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F1.jpeg?alt=media&token=a44c842c-27d7-46e1-b823-26407a34db32', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('4', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F4.jpeg?alt=media&token=46a2076d-a449-4b76-8860-1f00e24ffe44', 'drinks', null, null);
+INSERT INTO `img_gallery` VALUES ('5', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F5.jpeg?alt=media&token=2ca58fc1-4abb-47af-b3a8-a4e3d57fd3cb', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('6', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F6.jpeg?alt=media&token=4f8d0f92-7421-42c1-9ef3-8b3c810f00a0', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('7', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F7.jpeg?alt=media&token=65dd3f7d-065f-4543-a938-c4ce2c4c3d4c', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('8', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F8.jpeg?alt=media&token=cfdc9337-901e-4dce-9d7e-4ea5e3f9a7ec', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('9', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F9.jpeg?alt=media&token=ec6e8885-d543-4b93-bf7d-707451920422', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('12', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F12.jpeg?alt=media&token=c5ba918b-7729-4dd5-8a8d-51ca7e3f896d', 'freestyle', null, null);
+INSERT INTO `img_gallery` VALUES ('13', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F13.png?alt=media&token=198ae1bc-1b3b-4363-b8f2-7f860a2af3ce', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('14', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F14.jpeg?alt=media&token=96e8f13d-5d9a-43a0-a666-fb41acdc1764', 'freestyle', null, null);
+INSERT INTO `img_gallery` VALUES ('15', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F15.jpeg?alt=media&token=1b98d0e8-7778-4e6f-86d7-daab29a2a3f0', 'nails', null, null);
+INSERT INTO `img_gallery` VALUES ('16', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F16.jpeg?alt=media&token=1a6f2e18-bdff-4642-8d9d-3c2fe8125ae1', 'drinks', null, null);
+INSERT INTO `img_gallery` VALUES ('17', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-mygallery%2F17.jpg?alt=media&token=7e7fbe6f-e94a-43c3-8ddc-f413cb2c76ea', 'freestyle', null, null);
 
 -- ----------------------------
 -- Table structure for list_services
@@ -150,17 +146,17 @@ CREATE TABLE `list_services` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   KEY `id` (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of list_services
 -- ----------------------------
-INSERT INTO `list_services` VALUES ('1', 'ARTIFICIAL', 'img/img_service/sv_1.png', '2019-05-12 16:56:36', '0000-00-00 00:00:00');
-INSERT INTO `list_services` VALUES ('2', 'A-LA-CARTE', 'img/img_service/sv_5.jpeg', '2019-05-12 16:56:42', null);
-INSERT INTO `list_services` VALUES ('3', 'PRINCESS MENU', 'img/img_service/sv_4.png', '2019-05-12 16:56:46', null);
-INSERT INTO `list_services` VALUES ('4', 'HAIR REMOVAL', 'img/img_service/sv_2.png', '2019-05-12 16:56:50', null);
-INSERT INTO `list_services` VALUES ('5', 'EYELASH', 'img/img_service/sv_8.jpg', '2019-05-12 16:57:24', null);
-INSERT INTO `list_services` VALUES ('6', 'PEDICURES/MANICURES', 'img/img_service/sv_7.jpg', '2019-05-12 16:58:12', null);
+INSERT INTO `list_services` VALUES ('1', 'ARTIFICIAL', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-service%2Fsv_1.png?alt=media&token=5c9e3d9d-c052-4369-b03b-ca0d9e7f0d0b', '2019-05-12 16:56:36', '0000-00-00 00:00:00');
+INSERT INTO `list_services` VALUES ('2', 'A-LA-CARTE', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-service%2Fsv_5.jpeg?alt=media&token=072edd42-faae-40ce-9bad-d4f9617b28c7', '2019-05-12 16:56:42', null);
+INSERT INTO `list_services` VALUES ('3', 'PRINCESS MENU', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-service%2Fsv_4.png?alt=media&token=72698ad8-96a0-47d8-b68a-28fc2153aaac', '2019-05-12 16:56:46', null);
+INSERT INTO `list_services` VALUES ('4', 'HAIR REMOVAL', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-service%2Fsv_2.png?alt=media&token=6e2dde28-e6e9-4176-bb69-b94c06c5b5bd', '2019-05-12 16:56:50', null);
+INSERT INTO `list_services` VALUES ('5', 'EYELASH', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-service%2Fsv_8.jpg?alt=media&token=edce6433-a83d-42fe-8b1f-a80ef85c55d5', '2019-05-12 16:57:24', null);
+INSERT INTO `list_services` VALUES ('6', 'PEDICURES/MANICURES', 'https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fimg-service%2Fsv_7.jpg?alt=media&token=f20f3ba2-bec6-4f00-9aa5-2e34b5a177fc', '2019-05-12 16:58:12', null);
 
 -- ----------------------------
 -- Table structure for schedule_booking
@@ -180,11 +176,12 @@ CREATE TABLE `schedule_booking` (
   KEY `service_id` (`service_id`) USING BTREE,
   CONSTRAINT `schedule_booking_ibfk_2` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`),
   CONSTRAINT `schedule_booking_ibfk_3` FOREIGN KEY (`service_id`) REFERENCES `list_services` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of schedule_booking
 -- ----------------------------
+INSERT INTO `schedule_booking` VALUES ('1', 'Nguyễn Đình Quốc Hiếu', '0342996991', '2', '1', '2019-06-26 11:00:00', '2019-06-26 07:52:12', '2019-06-26 07:52:12');
 
 -- ----------------------------
 -- Table structure for service_detail
