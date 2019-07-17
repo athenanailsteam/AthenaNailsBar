@@ -271,13 +271,14 @@
     <!-- CTA Thumbnail -->
     <div class="cta-thumbnail bg-img" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fbg-img%2Fcta.png?alt=media&token=7a6bfa83-f5bc-4505-989a-7f260bde3966);"></div>
 
-<!-- FACEBOOK MESSENGER CHAT BOX -->
+{{!-- <!-- FACEBOOK MESSENGER CHAT BOX -->
 <div id="fb-root"></div>
 <script>
   // We create the DIV dynamically to work correctly with Tag Manager
   var chatDiv = document.createElement('div');
   chatDiv.className = 'fb-customerchat';
   chatDiv.setAttribute('page_id','2445727928782838'); // Facebook Page ID goes here
+  chatDiv.
   document.body.appendChild(chatDiv);
   // Initialise Facebook SDK
   window.fbAsyncInit = function() {
@@ -297,5 +298,33 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-</script>
+</script> --}}
+
+<script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fmessengerBtn">
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version : "v3.3"
+        });
+    };
+    </script>
+    <div id="fb-root"></div>
+    <div class="fb-customerchat" 
+        attribution=setup_tool 
+        page_id="2445727928782838" 
+        theme_color="#13cf13" 
+        logged_in_greeting="Hi! I'm Hieu, How can I help you? =)" 
+        logged_out_greeting="Hi! I'm Hieu, How can I help you? =)">
+    </div>
+    </div>
+
 </section>
