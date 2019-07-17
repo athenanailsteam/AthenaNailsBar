@@ -197,7 +197,6 @@
 <section class="akame-our-expert-area section-padding-80-0">
     <!-- Side Thumbnail -->
     <div class="side-thumbnail" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fbg-img%2F14.png?alt=media&token=954a8455-03b4-438e-932e-dc218d940427);"></div>
-
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-12 col-lg-6">
@@ -269,8 +268,34 @@
             </div>
         </div>
     </div>
-
     <!-- CTA Thumbnail -->
     <div class="cta-thumbnail bg-img" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/athenanailsgallery.appspot.com/o/img%2Fbg-img%2Fcta.png?alt=media&token=7a6bfa83-f5bc-4505-989a-7f260bde3966);"></div>
+
+<!-- FACEBOOK MESSENGER CHAT BOX -->
+<div id="fb-root"></div>
+<script>
+  // We create the DIV dynamically to work correctly with Tag Manager
+  var chatDiv = document.createElement('div');
+  chatDiv.className = 'fb-customerchat';
+  chatDiv.setAttribute('page_id','2445727928782838'); // Facebook Page ID goes here
+  document.body.appendChild(chatDiv);
+  // Initialise Facebook SDK
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '2471713603105735', // Facebook App ID goes here
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+</script>
 </section>
-<!-- Call To Action Area End -->
